@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>680</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Kitap Listesi - QListWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/* ANA PENCERE */
+QMainWindow,
+QWidget#centralwidget {
+    background-color: #101827;
+    font-family: &quot;Segoe UI&quot;;
+}
+
+/* BAŞLIK */
+QLabel#lblBaslik {
+    color: #F5C76A;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 12px;
+}
+
+/* KİTAP GİRİŞİ */
+QLineEdit#txtKitap {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    border: 2px solid #41516A;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+QLineEdit#txtKitap:focus {
+    border: 2px solid #F5C76A;
+}
+
+/* BUTONLAR */
+QPushButton {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+/* EKLE - ALTIN */
+QPushButton#btnEkle {
+    background-color: #E9B95B;
+    color: #172033;
+}
+
+QPushButton#btnEkle:hover {
+    background-color: #F5D48B;
+}
+
+QPushButton#btnEkle:pressed {
+    background-color: #C99A3D;
+}
+
+/* SİL - MİNT YEŞİLİ */
+QPushButton#btnSil {
+    background-color: #0F766E;
+}
+
+QPushButton#btnSil:hover {
+    background-color: #0D9488;
+}
+
+/* TEMİZLE - BORDO */
+QPushButton#btnTemizle {
+    background-color: #9F3650;
+}
+
+QPushButton#btnTemizle:hover {
+    background-color: #BE4965;
+}
+
+/* KİTAP LİSTESİ */
+QListWidget#listKitaplar {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+QListWidget#listKitaplar::item {
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+QListWidget#listKitaplar::item:hover {
+    background-color: #334155;
+}
+
+QListWidget#listKitaplar::item:selected {
+    background-color: #E9B95B;
+    color: #172033;
+    border-radius: 7px;
+}
+
+/* ALT BİLGİ */
+QLabel#lblDurum {
+    color: #F5C76A;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lblBaslik">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px; font-weight: bold; padding: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Kitap Listesi (QListWidget)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="txtKitap">
+        <property name="placeholderText">
+         <string>Kitap adını yazınız...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEkle">
+        <property name="text">
+         <string>Kitap Ekle</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listKitaplar"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnSil">
+        <property name="text">
+         <string>Seçili Kitabı Sil</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTemizle">
+        <property name="text">
+         <string>Tümünü Temizle</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblDurum">
+      <property name="text">
+       <string>Toplam kitap: 0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

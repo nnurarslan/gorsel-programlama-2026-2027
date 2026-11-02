@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QStackedWidget | Etkinlik Kayıt Sihirbazı</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget#centralwidget { background: #F3F6FB; color: #1E293B; font: 10pt &quot;Segoe UI&quot;; }
+QLabel#lblBaslik { font-size: 20pt; font-weight: bold; color: #163B66; padding: 12px; }
+QLabel#lblAdim { color: #2563EB; font-weight: bold; padding: 8px; }
+QStackedWidget { background: white; border: 1px solid #D7E2EF; border-radius: 14px; }
+QStackedWidget QWidget { background: white; }
+QLineEdit, QComboBox, QDateEdit, QTimeEdit, QPlainTextEdit, QTextBrowser {
+    background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px;
+    padding: 9px; color: #0F172A; min-height: 20px;
+}
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus, QTimeEdit:focus {
+    border: 2px solid #3B82F6;
+}
+QGroupBox { border: 1px solid #CBD5E1; border-radius: 9px; margin-top: 12px; padding: 12px; font-weight: bold; }
+QGroupBox::title { subcontrol-origin: margin; left: 12px; padding: 0 6px; }
+QCheckBox, QRadioButton { spacing: 9px; padding: 6px; }
+QCheckBox::indicator, QRadioButton::indicator { width: 17px; height: 17px; }
+QPushButton { background: #2563EB; color: white; border: 0; border-radius: 9px; padding: 11px 18px; font-weight: bold; }
+QPushButton:hover { background: #1D4ED8; }
+QPushButton:disabled { background: #CBD5E1; color: #64748B; }
+QPushButton#btnGeri { background: #64748B; }
+QPushButton#btnGeri:hover { background: #475569; }
+QPushButton#btnTamam { background: #059669; }
+QPushButton#btnTamam:hover { background: #047857; }
+QStatusBar { background: #163B66; color: white; }
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QLabel" name="lblBaslik">
+      <property name="text">
+       <string>ETKİNLİK KAYIT SİHİRBAZI</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblAdim">
+      <property name="text">
+       <string>Adım 1 / 4 — Katılımcı Bilgileri</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QWidget" name="pageKatilimci">
+       <layout class="QVBoxLayout" name="layoutPage0">
+        <item>
+         <widget class="QLabel" name="lblPage1">
+          <property name="text">
+           <string>1. Katılımcı bilgilerini giriniz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtAdSoyad">
+          <property name="placeholderText">
+           <string>Ad Soyad</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtEposta">
+          <property name="placeholderText">
+           <string>E-posta</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblBolum">
+          <property name="text">
+           <string>Bölüm</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cmbBolum">
+          <item>
+           <property name="text">
+            <string>Yazılım Mühendisliği</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bilgisayar Mühendisliği</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Endüstri Mühendisliği</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Diğer</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageTercihler">
+       <layout class="QVBoxLayout" name="layoutPage1">
+        <item>
+         <widget class="QLabel" name="lblPage2">
+          <property name="text">
+           <string>2. Etkinlik tercihlerinizi belirleyiniz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblTur">
+          <property name="text">
+           <string>Katılım biçimi (yalnızca birini seçin)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="grpKatilim">
+          <property name="title">
+           <string>Katılım Türü</string>
+          </property>
+          <layout class="QVBoxLayout" name="groupLayout">
+           <item>
+            <widget class="QRadioButton" name="rbYuzYuze">
+             <property name="text">
+              <string>Yüz yüze</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rbCevrimici">
+             <property name="text">
+              <string>Çevrim içi</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblAtolye">
+          <property name="text">
+           <string>İlgilendiğiniz atölyeler (birden fazla seçilebilir)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkPython">
+          <property name="text">
+           <string>Python ile Veri Analizi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkQt">
+          <property name="text">
+           <string>PyQt Arayüz Tasarımı</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkYapayZeka">
+          <property name="text">
+           <string>Yapay Zekâ Uygulamaları</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageTarih">
+       <layout class="QVBoxLayout" name="layoutPage2">
+        <item>
+         <widget class="QLabel" name="lblPage3">
+          <property name="text">
+           <string>3. Etkinlik tarihi ve saatini seçiniz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblTarih">
+          <property name="text">
+           <string>Etkinlik tarihi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEtkinlik">
+          <property name="displayFormat">
+           <string>dd.MM.yyyy</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSaat">
+          <property name="text">
+           <string>Başlangıç saati</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTimeEdit" name="timeEtkinlik">
+          <property name="displayFormat">
+           <string>HH:mm</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblAciklama">
+          <property name="text">
+           <string>Ek not</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="txtNot"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageOzet">
+       <layout class="QVBoxLayout" name="layoutPage3">
+        <item>
+         <widget class="QLabel" name="lblPage4">
+          <property name="text">
+           <string>4. Bilgileri kontrol edin ve kaydı tamamlayın</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="txtOzet"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="navigationLayout">
+      <item>
+       <widget class="QPushButton" name="btnGeri">
+        <property name="text">
+         <string>← Geri</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnIleri">
+        <property name="text">
+         <string>İleri →</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTamam">
+        <property name="text">
+         <string>Kaydı Tamamla</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
