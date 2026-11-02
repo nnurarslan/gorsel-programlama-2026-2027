@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>920</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QTabWidget - Öğrenci Yönetimi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget#centralwidget {
+    background: #F1F5F9; color: #1E293B;
+    font-family: &quot;Segoe UI&quot;; font-size: 10pt;
+}
+QLabel { color: #334155; background: transparent; }
+QLabel#lblBaslik { color: #142B49; font-size: 17pt; font-weight: bold; }
+QTabWidget::pane {
+    background: white; border: 1px solid #CBD5E1;
+    border-radius: 10px; top: -1px;
+}
+QTabBar::tab {
+    background: #E2E8F0; color: #475569;
+    padding: 11px 19px; margin-right: 4px;
+    border-top-left-radius: 8px; border-top-right-radius: 8px;
+}
+QTabBar::tab:selected { background: #2563EB; color: white; }
+QTabBar::tab:hover:!selected { background: #BFDBFE; }
+QLineEdit, QComboBox {
+    background: #F8FAFC; border: 1px solid #CBD5E1;
+    border-radius: 7px; padding: 8px; color: #0F172A;
+}
+QLineEdit:focus, QComboBox:focus { border: 2px solid #3B82F6; }
+QPushButton {
+    background: #2563EB; color: white; border: none;
+    border-radius: 8px; padding: 10px 14px;
+    font-weight: 600;
+}
+QPushButton:hover { background: #1D4ED8; }
+QPushButton:pressed { background: #1E40AF; }
+QPushButton#btnKaydet { background: #059669; }
+QPushButton#btnKaydet:hover { background: #047857; }
+QPushButton#btnTemizle { background: #F59E0B; }
+QPushButton#btnTemizle:hover { background: #D97706; }
+QPushButton#btnYeniSekme { background: #7C3AED; }
+QPushButton#btnYeniSekme:hover { background: #6D28D9; }
+QPushButton#btnSekmeKapat { background: #EF4444; }
+QPushButton#btnSekmeKapat:hover { background: #DC2626; }
+QTableWidget {
+    background: white; alternate-background-color: #F8FAFC;
+    border: 1px solid #CBD5E1; gridline-color: #E2E8F0;
+    selection-background-color: #DBEAFE; selection-color: #1E40AF;
+}
+QHeaderView::section {
+    background: #142B49; color: white; border: none; padding: 8px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lblBaslik">
+      <property name="text">
+       <string>QTabWidget Uygulaması | Öğrenci Yönetimi</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab0">
+       <attribute name="title">
+        <string>Öğrenci Kayıt</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="pageLayout0">
+        <item>
+         <widget class="QLabel" name="lblAciklama">
+          <property name="text">
+           <string>Yeni öğrenci bilgilerini giriniz:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label0">
+            <property name="text">
+             <string>Ad:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtAd">
+            <property name="placeholderText">
+             <string>Öğrencinin adı</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label1">
+            <property name="text">
+             <string>Soyad:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtSoyad">
+            <property name="placeholderText">
+             <string>Öğrencinin soyadı</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label2">
+            <property name="text">
+             <string>Bölüm:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="cmbBolum">
+            <item>
+             <property name="text">
+              <string>Yazılım Mühendisliği</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bilgisayar Mühendisliği</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Elektrik-Elektronik Mühendisliği</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonsLayout">
+          <item>
+           <widget class="QPushButton" name="btnKaydet">
+            <property name="text">
+             <string>Kaydet ve Listeye Git</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnTemizle">
+            <property name="text">
+             <string>Temizle</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="spacer1">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab1">
+       <attribute name="title">
+        <string>Öğrenci Listesi</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="pageLayout1">
+        <item>
+         <widget class="QTableWidget" name="tblOgrenciler">
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Ad</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Soyad</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Bölüm</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab2">
+       <attribute name="title">
+        <string>Hakkında</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="pageLayout2">
+        <item>
+         <widget class="QLabel" name="lblHakkinda">
+          <property name="text">
+           <string>Bu uygulama QTabWidget öğretimi için hazırlanmıştır.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout">
+      <item>
+       <widget class="QPushButton" name="btnYeniSekme">
+        <property name="text">
+         <string>+ Yeni Sekme</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSekmeKapat">
+        <property name="text">
+         <string>Aktif Sekmeyi Kapat</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblAktifSekme">
+        <property name="text">
+         <string>Aktif sekme: 0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
