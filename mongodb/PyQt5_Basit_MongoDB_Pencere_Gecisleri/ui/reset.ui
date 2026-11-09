@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+  <class>Form</class>
+  <widget class="QWidget" name="Form">
+    <property name="windowTitle">
+      <string>Şifremi Unuttum</string>
+    </property>
+    <property name="minimumSize">
+      <size>
+        <width>520</width>
+        <height>470</height>
+      </size>
+    </property>
+    <property name="styleSheet">
+      <string>QWidget#Form {background:#f3f7f7;} QLabel {color:#153a37;font-size:14px;} QLineEdit {padding:10px;border:1px solid #b6cfcb;border-radius:7px;background:white;font-size:14px;} QPushButton {padding:11px;background:#147d64;color:white;border-radius:7px;font-weight:bold;} QPushButton:hover {background:#0f604e;}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+        <number>35</number>
+      </property>
+      <property name="rightMargin">
+        <number>35</number>
+      </property>
+      <property name="topMargin">
+        <number>35</number>
+      </property>
+      <property name="bottomMargin">
+        <number>35</number>
+      </property>
+      <item>
+        <widget class="QLabel" name="lblTitle">
+          <property name="text">
+            <string>Şifremi Unuttum</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtEmail">
+          <property name="placeholderText">
+            <string>Kayıtlı e-posta</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtRecovery">
+          <property name="placeholderText">
+            <string>Mevcut şifre</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtNewPassword">
+          <property name="placeholderText">
+            <string>Yeni şifre</string>
+          </property>
+          <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtConfirm">
+          <property name="placeholderText">
+            <string>Yeni şifre tekrar</string>
+          </property>
+          <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QPushButton" name="btnReset">
+          <property name="text">
+            <string>Şifremi Yenile</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QPushButton" name="btnBack">
+          <property name="text">
+            <string>Girişe Dön</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="lblInfo">
+          <property name="text">
+            <string>Kayıt sırasında gösterilen mevcut şifre gereklidir.</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>

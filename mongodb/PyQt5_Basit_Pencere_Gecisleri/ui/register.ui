@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+  <class>Form</class>
+  <widget class="QWidget" name="Form">
+    <property name="windowTitle">
+      <string>Yeni Kullanıcı Kaydı</string>
+    </property>
+    <property name="minimumSize">
+      <size>
+        <width>520</width>
+        <height>470</height>
+      </size>
+    </property>
+    <property name="styleSheet">
+      <string>QWidget#Form {background:#f3f7f7;} QLabel {color:#153a37;font-size:14px;} QLineEdit {padding:10px;border:1px solid #b6cfcb;border-radius:7px;background:white;font-size:14px;} QPushButton {padding:11px;background:#147d64;color:white;border-radius:7px;font-weight:bold;} QPushButton:hover {background:#0f604e;}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+        <number>35</number>
+      </property>
+      <property name="rightMargin">
+        <number>35</number>
+      </property>
+      <property name="topMargin">
+        <number>35</number>
+      </property>
+      <property name="bottomMargin">
+        <number>35</number>
+      </property>
+      <item>
+        <widget class="QLabel" name="lblTitle">
+          <property name="text">
+            <string>Yeni Kullanıcı Kaydı</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtFirstName">
+          <property name="placeholderText">
+            <string>Ad</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtLastName">
+          <property name="placeholderText">
+            <string>Soyad</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtEmail">
+          <property name="placeholderText">
+            <string>E-posta</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtPassword">
+          <property name="placeholderText">
+            <string>Şifre (en az 8 karakter)</string>
+          </property>
+          <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLineEdit" name="txtConfirm">
+          <property name="placeholderText">
+            <string>Şifre tekrar</string>
+          </property>
+          <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QPushButton" name="btnCreate">
+          <property name="text">
+            <string>Hesap Oluştur</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QPushButton" name="btnBack">
+          <property name="text">
+            <string>Girişe Dön</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>
